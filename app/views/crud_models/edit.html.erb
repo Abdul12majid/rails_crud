@@ -1,0 +1,12 @@
+<% content_for :title, "Editing crud model" %>
+
+<h1>Edit Data</h1>
+
+<%= render "form", crud_model: @crud_model %>
+
+<br>
+
+<div>
+  <%= link_to "Show this crud model", @crud_model %> |
+  <%= link_to "Back to crud models", crud_models_path %>
+</div>

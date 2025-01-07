@@ -1,0 +1,29 @@
+<% content_for :title, "Crud models" %>
+
+<h1>Show Data</h1>
+
+<div class="container">
+  <table id="crud_models" class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Phone</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @crud_models.each do |crud_model| %>
+      <tr>
+      <th scope="row"><%= crud_model.phone %></th>
+        <td><%= crud_model.first_name %></td>
+        <td><%= crud_model.last_name %></td>
+        <td><%= crud_model.phone %></td>
+        <td><%= link_to "Show this crud model", crud_model %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New crud model", new_crud_model_path %>
+</div>

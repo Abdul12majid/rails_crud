@@ -1,0 +1,11 @@
+<% content_for :title, "New crud model" %>
+
+<h1>Add data</h1>
+
+<%= render "form", crud_model: @crud_model %>
+
+<br>
+
+<div>
+  <%= link_to "Back to crud models", crud_models_path %>
+</div>

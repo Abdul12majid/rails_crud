@@ -1,0 +1,8 @@
+<%= render @crud_model %>
+
+<div>
+  <%= link_to "Edit", edit_crud_model_path(@crud_model), class:"btn btn-primary btn-sm" %> |
+  <%= link_to "Back", crud_models_path, class:"btn btn-secondary btn-sm"%></br></br>
+
+  <%= button_to "Destroy", @crud_model, method: :delete, class:"btn btn-danger btn-sm" %>
+</div>
