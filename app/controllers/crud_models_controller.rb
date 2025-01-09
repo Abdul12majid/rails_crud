@@ -1,5 +1,6 @@
 class CrudModelsController < ApplicationController
   before_action :set_crud_model, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[ new update destroy ]
 
   # GET /crud_models or /crud_models.json
   def index
@@ -65,6 +66,6 @@ class CrudModelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def crud_model_params
-      params.expect(crud_model: [ :first_name, :last_name, :email, :phone ])
+      params.expect(crud_model: [ :first_name, :last_name, :email, :phone, :user_id ])
     end
 end
