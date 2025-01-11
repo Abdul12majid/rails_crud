@@ -16,6 +16,7 @@
     </thead>
     <tbody>
       <% @crud_models.each do |crud_model| %>
+      <% if crud_model.user_id == current_user.id %>
       <tr>
       <th scope="row"><%= crud_model.phone %></th>
         <td><%= crud_model.first_name %></td>
@@ -24,6 +25,7 @@
         <td><%= crud_model.user_id %></td>
         <td><%= link_to "Show this crud model", crud_model %></td>
       </tr>
+      <% end %>
       <% end %>
     </tbody>
   </table>

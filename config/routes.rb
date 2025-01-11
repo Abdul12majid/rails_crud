@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :crud_models
   root 'home#index'
   get "home/about"
+  get "home/my_data"
   
 end

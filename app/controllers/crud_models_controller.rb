@@ -20,6 +20,7 @@ class CrudModelsController < ApplicationController
   def edit
   end
 
+
   # POST /crud_models or /crud_models.json
   def create
     @crud_model = CrudModel.new(crud_model_params)
