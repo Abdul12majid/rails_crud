@@ -62,7 +62,7 @@ class CrudModelsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_crud_model
-      @crud_model = CrudModel.find(params.expect(:id))
+      @crud_model = CrudModel.friendly.find(params.expect(:id))
     end
 
     # Only allow a list of trusted parameters through.
