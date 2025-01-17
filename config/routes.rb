@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "members/show"
 
   devise_for :users, controllers: {
       registrations: 'crud_models/registrations'
