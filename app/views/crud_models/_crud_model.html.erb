@@ -7,6 +7,7 @@
     <li class="list-group-item"><%= crud_model.email %></li>
     <li class="list-group-item"><%= crud_model.phone %></li>
     <li class="list-group-item"><%= crud_model.user_id %></li>
+    <li><%= link_to crud_model.user.user_name, crud_model.user, class:"list-group-item" %></li>
   </ul>
 </div>
 </br>

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get "members/show"
-
+  
   devise_for :users, controllers: {
       registrations: 'crud_models/registrations'
     }
@@ -8,5 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get "home/about"
   get "home/my_data"
+  get "users/show"
+  resources :users, only: [:show]
   
 end
